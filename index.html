@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Collapsible About Me Text */
+        .about-text {
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 2; /* only 2 lines visible initially */
+            -webkit-box-orient: vertical;
+            transition: max-height 0.5s ease;
+        }
+
+        .about-text.expanded {
+            -webkit-line-clamp: unset;
+            max-height: 1000px; /* enough height to show full text */
+        }
+
+        /* Particles background */
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1; /* behind all content */
+            background: #111; /* fallback background */
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+</head>
+<body>
+    <div id="particles-js"></div>
+
+    <header class="header">
+        <a href="#home" class="logo">My Portfolio</a>
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#technical-skills">Technical Skills</a> 
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <i class="fas fa-bars" id="menu-icon"></i>
+    </header>
+
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Hello, It's Me</h3>
+            <h1>Atharv Rendale</h1>
+            <h3>And I'm an <span class="multiple-text">Ai Engineer</span></h3>
+            <p>AI Engineer skilled in Python, ML, and data pipelines, focused on building models that improve decision-making and solve day-to-day technical problems.</p>
+            <div class="social-media">
+                <a href="https://github.com/atharvrendale" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/atharvrendale" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://wa.me/9579958053" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
+            </div>
+            <a href="AtharvCV.pdf" class="btn" target="_blank">Download CV</a>
+
+        </div>
+        <div class="home-img">
+            <img src="atharv.jpg.jpeg" alt="Profile Picture"> 
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <h2 class="heading">About <span>Me</span></h2>
+        <div class="about-content">
+            
+            <p class="about-text">
+                I am Atharv Rendale, currently pursuing my engineering at DKTE Ichalkaranji. I am an AI enthusiast in machine learning, Python programming, and database management. I have learned Python programming, SQL, and have explored machine learning concepts. I enjoy experimenting with datasets and building models to understand how data works.
+
+I am motivated to gain more hands-on experience, improve my coding and ML skills, and gradually develop practical solutions to real-world problems.
+
+In addition, I have learned to create engaging animation videos using generative AI tools, which helps me combine creativity with technology. I am eager to keep learning new tools and techniques in AI/ML and apply them in small projects that can grow into more advanced applications over time.
+            </p>
+           
+            <a href="javascript:void(0)" class="btn" id="readMoreBtn">Read More</a>
+        </div>
+    </section>
+
+    <section class="skills" id="technical-skills"> 
+        <h2 class="heading">My <span>Technical Skills</span></h2>
+        
+        <div class="technical-skills-container"> 
+            
+            <div class="skills-category-box">
+                
+                <h3 class="main-skill">Programming Languages</h3>
+                <ul>
+                    <li class="sub-skill">Python</li>
+                    <li class="sub-skill">SQL (MySQL)</li>
+                </ul>
+            </div>
+
+            <div class="skills-category-box">
+                
+                <h3 class="main-skill">AI/ML Technologies</h3>
+                <ul>
+                    <li class="sub-skill">Frameworks: TensorFlow, Keras</li>
+                    <li class="sub-skill">Libraries: Scikit-learn, Pandas, NumPy, Matplotlib, Open CV</li>
+                    <li class="sub-skill">Techniques:Machine learning,NLP, Computer Vision</li>
+                    
+                </ul>
+            </div>
+
+<div class="skills-category-box">
+    <h3 class="main-skill">Cloud Technologies</h3>
+    <ul>
+        <li class="sub-skill">AWS</li>
+        <li class="sub-skill">Google Cloud</li>
+    </ul>
+</div>
+
+<div class="skills-category-box">
+    <h3 class="main-skill">Web Technologies</h3>
+    <ul>
+        <li class="sub-skill"> HTML/CSS</li>
+        <li class="sub-skill"> React</li>
+        <li class="sub-skill"> Javascript</li>
+        <li class="sub-skill"> Node.js</li>
+    </ul>
+</div>
+
+<div class="skills-category-box">
+    <h3 class="main-skill">Tools & Frameworks</h3>
+    <ul>
+        <li class="sub-skill">VS Code</li>
+        <li class="sub-skill">Streamlit</li>
+        <li class="sub-skill">Jupyter Notebook</li>
+        <li class="sub-skill">Google Colab</li>
+        <li class="sub-skill">Git</li>
+        <li class="sub-skill">GitHub</li>
+    </ul>
+</div>
+
+        </div>
+    </section>
+
+    <section class="projects" id="projects">
+        <h2 class="heading">Latest <span>Projects</span></h2>
+        <div class="projects-container">
+            
+            <!-- PROJECT 1 -->
+            <div class="project-item">
+
+    <div class="project-box">
+        <img src="admission.jpg" alt="">
+        <div class="project-layer">
+            <h4>Admission AI Counselor</h4>
+            <p>An AI-based student admission recommendation system.</p>
+            <a href="#"><i class="fas fa-external-link-alt"></i></a>
+        </div>
+    </div>
+
+    <div class="tech-box">
+        <span>Python</span>
+        <span>TensorFlow</span>
+        <span>Flask</span>
+    </div>
+
+</div>
+
+
+            <!-- PROJECT 2 -->
+           <div class="project-item">
+
+    <div class="project-box">
+        <img src="platelet donation.jpg" alt="">
+        <div class="project-layer">
+            <h4>Platelet Donation</h4>
+            <p>A full-stack application connecting platelet donors with hospitals/patients based on location, blood type, and urgency, improving logistics.</p>
+            <a href="#"><i class="fas fa-external-link-alt"></i></a>
+        </div>
+    </div>
+
+    <div class="tech-box">
+        <span>Express</span>
+        <span>HTML/CSS</span>
+        <span>Javascript</span>
+        <span>Mongo DB</span>
+    </div>
+
+</div>
+
+            <!-- PROJECT 3 -->
+           <div class="project-item">
+
+    <div class="project-box">
+        <img src="Sentiment.jpg" alt="">
+        <div class="project-layer">
+            <h4>Sentiment Analysis Tool</h4>
+            <p>AA natural language processing (NLP) tool that analyzes text data (e.g., social media comments) to determine the underlying emotional tone (positive, negative, neutral).</p>
+            <a href="#"><i class="fas fa-external-link-alt"></i></a>
+        </div>
+    </div>
+
+    <div class="tech-box">
+        <span>Python</span>
+        <span>NLP</span>
+        <span>NLTK</span>
+    </div>
+
+</div>
+
+            
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact <span>Me!</span></h2>
+        <form action="https://formspree.io/f/xjklpkwd" method="POST">
+            <div class="input-box">
+                <input type="text" name="name" placeholder="Full Name" required>
+                <input type="email" name="email" placeholder="Email Address" required>
+            </div>
+            <div class="input-box">
+                <input type="tel" name="phone" placeholder="Mobile Number">
+                <input type="text" name="subject" placeholder="Email Subject">
+            </div>
+            <textarea name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+            <input type="submit" value="Send Message" class="btn">
+        </form>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Copyright © 2025 by AtharvRendale | All Rights Reserved.</p>
+        </div>
+        <div class="footer-iconTop">
+            <a href="#home"><i class="fas fa-arrow-up"></i></a>
+        </div>
+    </footer>
+
+    <script>
+        const readMoreBtn = document.getElementById("readMoreBtn");
+        const aboutText = document.querySelector(".about-text");
+
+        readMoreBtn.addEventListener("click", () => {
+            aboutText.classList.toggle("expanded");
+            if (aboutText.classList.contains("expanded")) {
+                readMoreBtn.textContent = "Read Less";
+            } else {
+                readMoreBtn.textContent = "Read More";
+            }
+        });
+
+        /* Initialize particles.js with cursor interaction */
+        particlesJS("particles-js", {
+          "particles": {
+            "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
+            "color": { "value": "#00abf0" },
+            "shape": { "type": "circle" },
+            "opacity": { "value": 0.5, "random": false },
+            "size": { "value": 3, "random": true },
+            "line_linked": { "enable": true, "distance": 150, "color": "#00abf0", "opacity": 0.4, "width": 1 },
+            "move": { "enable": true, "speed": 3, "direction": "none", "random": false, "straight": false, "out_mode": "out", "attract": { "enable": true, "rotateX": 600, "rotateY": 1200 } }
+          },
+          "interactivity": {
+            "detect_on": "canvas",
+            "events": { 
+                "onhover": { "enable": true, "mode": "grab" }, 
+                "onclick": { "enable": true, "mode": "push" } 
+            },
+            "modes": { 
+                "repulse": { "distance": 200, "line_linked": { "opacity": 1 } }, 
+                "push": { "particles_nb": 4 } 
+            }
+          },
+          "retina_detect": true
+        });
+    </script>
+    
+    <script src="script.js"></script>
+</body>
+</html>
